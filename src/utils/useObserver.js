@@ -4,8 +4,18 @@ import { NavBarActive } from "../App";
 const useObserver = (componentRef) => {
   const [isVisible, setIsVisible] = useState(false);
   const { setselectedButton } = useContext(NavBarActive);
-
+  const isMobileDevice = () => {
+    return window.innerWidth < 768;
+  };
   useEffect(() => {
+    const getThreshold = () => {
+      if (isMobileDevice()) {
+        return 0.2;
+      } else {
+        return 0.4;
+      }
+    };
+
     const observer = new IntersectionObserver(
       (entries) => {
         const entry = entries[0];
@@ -16,7 +26,7 @@ const useObserver = (componentRef) => {
           setIsVisible(false);
         }
       },
-      { threshold: 0.4 }
+      { threshold: getThreshold() }
     );
 
     const currentRef = componentRef.current;

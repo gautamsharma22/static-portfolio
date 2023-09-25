@@ -20,7 +20,6 @@ export default function MenuBar(props) {
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
-  // const scrollToSection = MyScroller;
   const drawer = MyDrawer(handleDrawerToggle,MyScroller);
 
   const container =

@@ -5,12 +5,12 @@ import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
 import Typography from "@mui/material/Typography";
-
+import MyScroller from "../utils/useScroller";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 const navItems = ["Home", "About", "Projects", "Message"];
 const SideDrawer = (props) => {
-  const { handleDrawerToggle, scrollToSection } = props;
+  const { handleDrawerToggle } = props;
   return (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2, fontWeight: "bold" }}>
@@ -22,7 +22,7 @@ const SideDrawer = (props) => {
           <ListItem key={item} disablePadding>
             <ListItemButton
               sx={{ textAlign: "center" }}
-              onClick={() => scrollToSection(item)}
+              onClick={() => MyScroller(item)}
             >
               <ListItemText primary={item} />
             </ListItemButton>

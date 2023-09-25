@@ -57,8 +57,8 @@ export default function Projects() {
             <IconButton aria-label="Love it">
               <FavoriteIcon color={"error"} />
             </IconButton>
-            <IconButton aria-label="GitHub Link">
-              <InsertLinkIcon onClick={openLinkInNewTab} />
+            <IconButton aria-label="GitHub Link" onClick={openLinkInNewTab}>
+              <InsertLinkIcon />
             </IconButton>
           </CardActions>
         </Card>
