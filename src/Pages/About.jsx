@@ -55,15 +55,16 @@ const About = () => {
               About Me
             </Typography>
             <Typography variant={variant} sx={{ p: 3 }} textAlign={"justify"}>
-              I am Gautam Sharma, currently in my final year of studies. My
-              passion lies in web development and problem-solving, and I am
-              dedicated to honing my skills in these areas. I have invested time
-              and effort in learning the MERN (MongoDB, Express.js, React.js,
-              Node.js) stack, and I have attained an intermediate level of
-              proficiency in these technologies. Alongside my web development
-              skills, I have also acquired intermediate knowledge in Data
-              Structures and Algorithms (DSA). These skills have enabled me to
-              approach problem-solving in a systematic manner.
+              I am Gautam Sharma, currently in my first year of master's
+              studies. My passion lies in web development and problem-solving,
+              and I am dedicated to honing my skills in these areas. I have
+              invested time and effort in learning the MERN (MongoDB,
+              Express.js, React.js, Node.js) stack and React Native, and I have
+              attained an intermediate level of proficiency in these
+              technologies. Alongside my web development skills, I have also
+              acquired intermediate knowledge in Data Structures and Algorithms
+              (DSA). These skills have enabled me to approach problem-solving in
+              a systematic manner.
             </Typography>
             <Typography
               variant={variant}
@@ -71,15 +72,15 @@ const About = () => {
               sx={{ p: 3 }}
               textAlign={"justify"}
             >
-              As I near the completion of my undergraduate studies, I am
-              actively seeking internship opportunities to apply and further
-              develop my skills. I am eager to gain real-world experience and
-              contribute to web development projects. Through internships, I aim
-              to broaden my understanding of industry practices, enhance my
-              technical abilities, and collaborate with professionals in the
-              field. I am excited about the opportunity to learn from
-              experienced mentors and work on challenging projects that will
-              allow me to grow both professionally and personally.
+              As I progress through my master's program, I am actively seeking
+              internship opportunities to apply and further develop my skills. I
+              am eager to gain real-world experience and contribute to web
+              development projects. Through internships, I aim to broaden my
+              understanding of industry practices, enhance my technical
+              abilities, and collaborate with professionals in the field. I am
+              excited about the opportunity to learn from experienced mentors
+              and work on challenging projects that will allow me to grow both
+              professionally and personally.
             </Typography>
           </Box>
         </Box>
