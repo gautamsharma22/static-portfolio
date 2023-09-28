@@ -60,20 +60,19 @@ const Home = () => {
           }}
         >
           <Typography variant="h3" gutterBottom fontWeight="bold">
-            Hello There!
+            Hello!
           </Typography>
           <Typed
             strings={["I am Gautam Sharma"]}
             typeSpeed={50}
-            backSpeed={50}
             style={textStyle}
           />
           <Typed
             strings={[
-              "I love <span style='color: #3da9fc;'>Problem Solving </span>",
-              "I love <span style='color: red;'>Web Development</span>",
+              "Interested in <span style='color: #3da9fc'>Problem Solving </span>",
+              "Interested in <span style='color: red'>Web Development</span>"
             ]}
-            typeSpeed={50}
+            typeSpeed={40}
             backSpeed={80}
             loop
             contentType="html"
