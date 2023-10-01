@@ -1,19 +1,11 @@
-import Lottie from "react-lottie";
+// import React from "react";
+import Lottie from "lottie-react"
 const useLottieAnim = (props) => {
   const { animationData } = props;
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-      clearCanvas: "false",
-    },
-  };
 
   return (
     <div>
-      <Lottie options={defaultOptions} />
+      <Lottie animationData={animationData} loop={true}/>
     </div>
   );
 };

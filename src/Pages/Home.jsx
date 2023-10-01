@@ -1,19 +1,46 @@
 import React from "react";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { Box } from "@mui/system";
 import { Typography } from "@mui/material";
-import Typed from "react-typed";
+import Typed from "typed.js";
 import Background from "../backgrounds/zig-zag.svg";
 import animationData from "../assets/animated.json";
-import LottieAnim from "../utils/useLottieAnim.js"
+import LottieAnim from "../utils/useLottieAnim.js";
 import useObserver from "../utils/useObserver";
 const Home = () => {
   const textStyle = {
     fontWeight: "bold",
-    fontSize: "2.5rem",
+    fontSize: "2.2rem",
   };
   const componentRef = useRef(null);
   useObserver(componentRef);
+  const heading1 = useRef(null);
+  const heading2 = useRef(null);
+  useEffect(() => {
+    const options = {
+      startDelay: 500,
+      typeSpeed: 80,
+      backSpeed: 80,
+      backDelay: 80,
+    };
+    const typed1 = new Typed(heading1.current, {
+      strings: ["I am Gautam Sharma"],
+      ...options,
+    });
+    const typed2 = new Typed(heading2.current, {
+      strings: [
+        "Interested in <span style='color: #3da9fc'>Problem Solving. </span>",
+        "Interested in <span style='color: red'>Web Development.</span>",
+      ],
+      ...options,
+      loop:true,
+    });
+
+    return () => {
+      typed1.destroy();
+      typed2.destroy();
+    };
+  }, []);
   return (
     <Box
       id="Home"
@@ -37,7 +64,7 @@ const Home = () => {
           width: { xs: "100vw", sm: "50vw" },
         }}
       >
-      <LottieAnim animationData={animationData}/>
+        <LottieAnim animationData={animationData} />
       </Box>
       <Box
         sx={{
@@ -62,22 +89,11 @@ const Home = () => {
           <Typography variant="h3" gutterBottom fontWeight="bold">
             Hello!
           </Typography>
-          <Typed
-            strings={["I am Gautam Sharma"]}
-            typeSpeed={50}
-            style={textStyle}
-          />
-          <Typed
-            strings={[
-              "Interested in <span style='color: #3da9fc'>Problem Solving </span>",
-              "Interested in <span style='color: red'>Web Development</span>"
-            ]}
-            typeSpeed={40}
-            backSpeed={80}
-            loop
-            contentType="html"
-            style={textStyle}
-          />
+          <div display="inline" style={textStyle}>
+            <span ref={heading1} />
+            <br />
+            <span ref={heading2} />
+          </div>
         </Box>
       </Box>
     </Box>
