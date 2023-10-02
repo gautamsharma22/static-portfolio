@@ -6,24 +6,18 @@ import Typography from "@mui/material/Typography";
 import { Box, CardActionArea } from "@mui/material";
 import { CurrTech } from "../extras/Data";
 import Background from "../backgrounds/bullseye-gradient.svg";
-import { Grow } from "@mui/material";
 import useObserver from "../utils/useObserver";
 const LangSkills = () => {
   const componentRef = useRef(null);
-  const isVisible = useObserver(componentRef);
+  useObserver(componentRef);
   const newArr = CurrTech.map((tech) => {
     return (
-      <Grow
-        key={tech.Name}
-        in={isVisible}
-        style={{ transformOrigin: "0 0 0" }}
-        {...(isVisible ? { timeout: 1200 } : {})}
-      >
         <Card
           sx={{
             width: { xs: "100%", sm: "25%" },
             m: 1,
-          }}
+        }}
+        key={tech.Name}
         >
           <CardActionArea>
             <CardMedia
@@ -52,7 +46,6 @@ const LangSkills = () => {
             </CardContent>
           </CardActionArea>
         </Card>
-      </Grow>
     );
   });
   return (
@@ -72,11 +65,6 @@ const LangSkills = () => {
           mt: 2,
         }}
       >
-        <Grow
-          in={isVisible}
-          style={{ transformOrigin: "0 0 0" }}
-          {...(isVisible ? { timeout: 1200 } : {})}
-        >
           <Typography
             variant="h3"
             gutterBottom
@@ -88,7 +76,6 @@ const LangSkills = () => {
           >
             Languages / Skills
           </Typography>
-        </Grow>
         <Box
           sx={{
             display: "flex",

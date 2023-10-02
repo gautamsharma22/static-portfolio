@@ -2,11 +2,10 @@
 import Lottie from "lottie-react"
 const useLottieAnim = (props) => {
   const { animationData } = props;
-
   return (
-    <div>
-      <Lottie animationData={animationData} loop={true}/>
-    </div>
+    <>
+      <Lottie animationData={animationData}/>
+    </>
   );
 };
 export default useLottieAnim;

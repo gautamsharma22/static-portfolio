@@ -12,57 +12,46 @@ import Typography from "@mui/material/Typography";
 import InsertLinkIcon from "@mui/icons-material/InsertLink";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { ProjectData } from "../extras/Data";
-import { Grow, Zoom } from "@mui/material";
 import useObserver from "../utils/useObserver";
 export default function Projects() {
   const componentRef = useRef(null);
-  const isVisible = useObserver(componentRef);
+  useObserver(componentRef);
 
   const projects = ProjectData.map((project) => {
     const openLinkInNewTab = () => {
       window.open(project.link, "_blank");
     };
     return (
-      <Grow
-        key={project.title}
-        in={isVisible}
-        style={{ transformOrigin: "0 0 0" }}
-        {...(isVisible ? { timeout: 1200 } : {})}
-      >
-        <Card
-          sx={{ width: { xs: "100%", sm: "25%" }, m: 1 }}
-          key={project.title}
-        >
-          <CardHeader
-            avatar={
-              <Avatar sx={{ bgcolor: project.color }} aria-label="project">
-                {project.title[0]}
-              </Avatar>
-            }
-            title={project.title}
-            subheader={project.date}
-          />
-          <CardMedia
-            component="img"
-            height="194"
-            image={project.Image}
-            alt={project.title}
-          />
-          <CardContent>
-            <Typography variant="body2" color="text.secondary">
-              {project.info}
-            </Typography>
-          </CardContent>
-          <CardActions disableSpacing>
-            <IconButton aria-label="Love it">
-              <FavoriteIcon color={"error"} />
-            </IconButton>
-            <IconButton aria-label="GitHub Link" onClick={openLinkInNewTab}>
-              <InsertLinkIcon />
-            </IconButton>
-          </CardActions>
-        </Card>
-      </Grow>
+      <Card sx={{ width: { xs: "100%", sm: "25%" }, m: 1 }} key={project.title}>
+        <CardHeader
+          avatar={
+            <Avatar sx={{ bgcolor: project.color }} aria-label="project">
+              {project.title[0]}
+            </Avatar>
+          }
+          title={project.title}
+          subheader={project.date}
+        />
+        <CardMedia
+          component="img"
+          height="194"
+          image={project.Image}
+          alt={project.title}
+        />
+        <CardContent>
+          <Typography variant="body2" color="text.secondary">
+            {project.info}
+          </Typography>
+        </CardContent>
+        <CardActions disableSpacing>
+          <IconButton aria-label="Love it">
+            <FavoriteIcon color={"error"} />
+          </IconButton>
+          <IconButton aria-label="GitHub Link" onClick={openLinkInNewTab}>
+            <InsertLinkIcon />
+          </IconButton>
+        </CardActions>
+      </Card>
     );
   });
   return (
@@ -90,23 +79,17 @@ export default function Projects() {
             alignItems: "center",
           }}
         >
-          <Zoom
-            in={isVisible}
-            style={{ transformOrigin: "0 0 0" }}
-            {...(isVisible ? { timeout: 800 } : {})}
+          <Typography
+            variant="h3"
+            gutterBottom
+            sx={{
+              mt: 3,
+              textAlign: "center",
+              fontWeight: "bold",
+            }}
           >
-            <Typography
-              variant="h3"
-              gutterBottom
-              sx={{
-                mt: 3,
-                textAlign: "center",
-                fontWeight: "bold",
-              }}
-            >
-              Mini Projects
-            </Typography>
-          </Zoom>
+            Mini Projects
+          </Typography>
           <Box
             sx={{
               display: "flex",
