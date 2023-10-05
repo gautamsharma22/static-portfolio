@@ -10,7 +10,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import FaceRetouchingNaturalIcon from "@mui/icons-material/FaceRetouchingNatural";
 import { NavBarActive } from "../App";
-import MyDrawer from "./SideDrawer"
+import MyDrawer from "./SideDrawer";
 import MyScroller from "../utils/useScroller";
 export default function MenuBar(props) {
   const navItems = ["Home", "About", "Projects", "Message"];
@@ -20,11 +20,17 @@ export default function MenuBar(props) {
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
-  const drawer = MyDrawer(handleDrawerToggle,MyScroller);
+  const handleDownloadClick = () => {
+    const link = document.createElement("a");
+    link.href =
+      "https://drive.google.com/file/d/1F6YtTo_Qc9GyKwZymmG3fxFrEHOLlvsu/view";
+    link.download = "Sample_Resume.pdf";
+    link.click();
+  };
+  const drawer = MyDrawer(handleDrawerToggle,handleDownloadClick);
 
   const container =
     window !== undefined ? () => window().document.body : undefined;
-
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
@@ -70,6 +76,18 @@ export default function MenuBar(props) {
                 {item}
               </Button>
             ))}
+            <Button
+              sx={{
+                color: "#ffffff",
+                fontWeight: "bold",
+                ":hover": {
+                  color: "#eb3b3b",
+                },
+              }}
+              onClick={handleDownloadClick}
+            >
+              Hire Me!
+            </Button>
           </Box>
         </Toolbar>
       </AppBar>
