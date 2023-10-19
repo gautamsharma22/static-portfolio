@@ -4,14 +4,10 @@ import ContactForm from "../extras/Form";
 import Background from "../backgrounds/scattered-forcefields.svg";
 import animationData from "../assets/contact.json";
 import LottieAnim from "../utils/useLottieAnim"
-import useObserver from "../utils/useObserver";
 const Message = () => {
-  const componentRef = useRef(null);
-  useObserver(componentRef);
   return (
     <>
       <Box
-        ref={componentRef}
         id="Message"
         sx={{
           display: "flex",

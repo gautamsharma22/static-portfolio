@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -6,10 +6,7 @@ import Typography from "@mui/material/Typography";
 import { Box, CardActionArea } from "@mui/material";
 import { CurrTech } from "../extras/Data";
 import Background from "../backgrounds/bullseye-gradient.svg";
-import useObserver from "../utils/useObserver";
 const LangSkills = () => {
-  const componentRef = useRef(null);
-  useObserver(componentRef);
   const newArr = CurrTech.map((tech) => {
     return (
         <Card
@@ -51,7 +48,6 @@ const LangSkills = () => {
   return (
     <>
       <Box
-        ref={componentRef}
         minHeight="100vh"
         sx={{
           display: "flex",

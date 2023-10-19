@@ -12,10 +12,7 @@ import Typography from "@mui/material/Typography";
 import InsertLinkIcon from "@mui/icons-material/InsertLink";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { ProjectData } from "../extras/Data";
-import useObserver from "../utils/useObserver";
 export default function Projects() {
-  const componentRef = useRef(null);
-  useObserver(componentRef);
 
   const projects = ProjectData.map((project) => {
     const openLinkInNewTab = () => {
@@ -57,7 +54,6 @@ export default function Projects() {
   return (
     <>
       <Box
-        ref={componentRef}
         id="Projects"
         sx={{
           display: "flex",

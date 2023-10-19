@@ -1,19 +1,15 @@
-import React, { useRef } from "react";
+import React from "react";
 import { Box } from "@mui/system";
 import { Typography } from "@mui/material";
 import Background from "../backgrounds/sun-tornado.svg";
 import DevImage from "../assets/profile.jpg";
 import { useMediaQuery } from "@mui/material";
-import useObserver from "../utils/useObserver";
 const About = () => {
   const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down("sm"));
   const variant = isSmallScreen ? "body1" : "h6";
-  const componentRef = useRef(null);
-  useObserver(componentRef);
   return (
     <>
       <Box
-        ref={componentRef}
         sx={{
           display: "flex",
           flexDirection: { xs: "column", sm: "row" },

@@ -6,14 +6,11 @@ import Typed from "typed.js";
 import Background from "../backgrounds/zig-zag.svg";
 import animationData from "../assets/animated.json";
 import LottieAnim from "../utils/useLottieAnim.js";
-import useObserver from "../utils/useObserver";
 const Home = () => {
   const textStyle = {
     fontWeight: "bold",
     fontSize: "2.2rem",
   };
-  const componentRef = useRef(null);
-  useObserver(componentRef);
   const heading1 = useRef(null);
   const heading2 = useRef(null);
   useEffect(() => {
@@ -44,7 +41,6 @@ const Home = () => {
   return (
     <Box
       id="Home"
-      ref={componentRef}
       sx={{
         display: "flex",
         flexDirection: { xs: "column", sm: "row" },

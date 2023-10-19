@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -6,12 +6,8 @@ import Typography from "@mui/material/Typography";
 import { Box, CardActionArea } from "@mui/material";
 import { Tech } from "../extras/Data";
 import Background from "../backgrounds/wavey-fingerprint.svg";
-import useObserver from "../utils/useObserver";
 
 const TechStack = () => {
-  const componentRef = useRef(null);
-
-  useObserver(componentRef);
   const newArr = Tech.map((tech) => {
     return (
       <Card
@@ -50,7 +46,6 @@ const TechStack = () => {
   return (
     <>
       <Box
-        ref={componentRef}
         minHeight="80vh"
         sx={{
           display: "flex",

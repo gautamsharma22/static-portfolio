@@ -1,10 +1,30 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html, body, #root {
-    height: 100%;
-    width: 100%;
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+.nav-items {
+  color: white;
+  padding: 0.6rem;
+  font-weight: bolder;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.active {
+  color: #eb3b3b;
+}
+.nav-items:hover {
+  color: #eb3b3b;
+  cursor: pointer;
+  border-radius: 10%;
+  background-color:rgba(var(--joy-palette-neutral-darkChannel, 251 252 254) / 0.1);
 }

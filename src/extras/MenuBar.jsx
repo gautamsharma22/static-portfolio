@@ -9,12 +9,10 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import FaceRetouchingNaturalIcon from "@mui/icons-material/FaceRetouchingNatural";
-import { NavBarActive } from "../App";
 import MyDrawer from "./SideDrawer";
-import MyScroller from "../utils/useScroller";
+import { Link } from "react-scroll";
 export default function MenuBar(props) {
   const navItems = ["Home", "About", "Projects", "Message"];
-  const { selectedButton, setselectedButton } = React.useContext(NavBarActive);
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const handleDrawerToggle = () => {
@@ -27,7 +25,7 @@ export default function MenuBar(props) {
     link.download = "Sample_Resume.pdf";
     link.click();
   };
-  const drawer = MyDrawer(handleDrawerToggle,handleDownloadClick);
+  const drawer = MyDrawer(handleDrawerToggle, handleDownloadClick);
 
   const container =
     window !== undefined ? () => window().document.body : undefined;
@@ -62,32 +60,23 @@ export default function MenuBar(props) {
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
-              <Button
-                key={item}
-                sx={{
-                  color: selectedButton === item ? "#eb3b3b" : "#ffffff",
-                  fontWeight: "bold",
-                }}
-                onClick={() => {
-                  setselectedButton(item);
-                  MyScroller(item);
-                }}
+              <Link
+                activeClass="active"
+                to={item}
+                spy={true}
+                smooth={true}
+                className="nav-items"
               >
                 {item}
-              </Button>
+              </Link>
             ))}
-            <Button
-              sx={{
-                color: "#ffffff",
-                fontWeight: "bold",
-                ":hover": {
-                  color: "#eb3b3b",
-                },
-              }}
+            <a
+              className="nav-items"
+              href="https://drive.google.com/file/d/1F6YtTo_Qc9GyKwZymmG3fxFrEHOLlvsu/view"
               onClick={handleDownloadClick}
             >
               Hire Me!
-            </Button>
+            </a>
           </Box>
         </Toolbar>
       </AppBar>

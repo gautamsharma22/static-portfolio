@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { createContext, useState } from "react";
+import React from "react";
 import HomePage from "./Pages/Home";
 import MenuBar from "./extras/MenuBar";
 import AboutPage from "./Pages/About";
@@ -9,9 +9,7 @@ import LangSkillsPage from "./Pages/LangSkills";
 import Projects from "./Pages/Projects";
 import Footer from "./extras/Footer";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-export const NavBarActive = createContext();
 function App() {
-  const [selectedButton, setselectedButton] = useState("Home");
   const darkTheme = createTheme({
     palette: {
       mode: "dark",
@@ -20,7 +18,6 @@ function App() {
   return (
     <div className="App">
       <ThemeProvider theme={darkTheme}>
-        <NavBarActive.Provider value={{ selectedButton, setselectedButton }}>
           <MenuBar />
           <HomePage />
           <AboutPage />
@@ -29,7 +26,6 @@ function App() {
           <TechStackPage />
           <MessagePage />
           <Footer />
-        </NavBarActive.Provider>
       </ThemeProvider>
     </div>
   );
