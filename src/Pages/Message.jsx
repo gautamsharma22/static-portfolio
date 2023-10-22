@@ -1,58 +1,23 @@
-import React, { useRef } from "react";
+import React from "react";
 import { Box } from "@mui/system";
 import ContactForm from "../extras/Form";
-import Background from "../backgrounds/scattered-forcefields.svg";
 import animationData from "../assets/contact.json";
-import LottieAnim from "../utils/useLottieAnim"
+import LottieAnim from "../utils/useLottieAnim";
+import {
+  MESSAGE_BOX1,
+  MESSAGE_BOX2,
+  MESSAGE_BOX3,
+  MESSAGE_BOX4,
+} from "../styles/styles";
 const Message = () => {
   return (
     <>
-      <Box
-        id="Message"
-        sx={{
-          display: "flex",
-          flexDirection: { xs: "column", sm: "row" },
-          background: `url(${Background})`,
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundAttachment: "fixed",
-          mt: 2,
-        }}
-      >
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            // border: "5px solid red",
-            height: { xs: "50vh", sm: "100vh" },
-            width: { xs: "100vw", sm: "50vw" },
-          }}
-        >
-        <LottieAnim animationData={animationData}/>
+      <Box id="Message" sx={MESSAGE_BOX1}>
+        <Box sx={MESSAGE_BOX2}>
+          <LottieAnim animationData={animationData} />
         </Box>
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            // border: "5px solid blue",
-            height: "100vh",
-            width: { xs: "100vw", sm: "50vw" },
-          }}
-        >
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              flexDirection: "column",
-              // border: "5px solid blue",
-              height: "60%",
-              width: "80%",
-            }}
-          >
+        <Box sx={MESSAGE_BOX3}>
+          <Box sx={MESSAGE_BOX4}>
             <ContactForm />
           </Box>
         </Box>

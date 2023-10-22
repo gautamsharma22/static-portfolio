@@ -3,9 +3,9 @@ import { useRef, useEffect } from "react";
 import { Box } from "@mui/system";
 import { Typography } from "@mui/material";
 import Typed from "typed.js";
-import Background from "../backgrounds/zig-zag.svg";
 import animationData from "../assets/animated.json";
 import LottieAnim from "../utils/useLottieAnim.js";
+import { HOME_BOX1, HOME_BOX2, HOME_BOX3, HOME_BOX4 } from "../styles/styles";
 const Home = () => {
   const textStyle = {
     fontWeight: "bold",
@@ -30,7 +30,7 @@ const Home = () => {
         "Interested in <span style='color: red'>Web Development.</span>",
       ],
       ...options,
-      loop:true,
+      loop: true,
     });
 
     return () => {
@@ -39,49 +39,12 @@ const Home = () => {
     };
   }, []);
   return (
-    <Box
-      id="Home"
-      sx={{
-        display: "flex",
-        flexDirection: { xs: "column", sm: "row" },
-        background: `url(${Background})`,
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundAttachment: "fixed",
-      }}
-    >
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: { xs: "50vh", sm: "100vh" },
-          width: { xs: "100vw", sm: "50vw" },
-        }}
-      >
+    <Box id="Home" sx={HOME_BOX1}>
+      <Box sx={HOME_BOX2}>
         <LottieAnim animationData={animationData} />
       </Box>
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          // border: "5px solid blue",
-          height: { xs: "60vh", sm: "100vh" },
-          width: { xs: "100vw", sm: "50vw" },
-        }}
-      >
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: { xs: "", sm: "center" },
-            flexDirection: "column",
-            // border: "5px solid blue",
-            height: { xs: "100%", sm: "60%" },
-            width: "80%",
-          }}
-        >
+      <Box sx={HOME_BOX3}>
+        <Box sx={HOME_BOX4}>
           <Typography variant="h3" gutterBottom fontWeight="bold">
             Hello!
           </Typography>
