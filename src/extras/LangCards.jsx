@@ -7,7 +7,6 @@ import { CurrTech } from "../extras/Data";
 const LangCards = CurrTech.map((tech) => {
   return (
     <Card
-      variant="outlined"
       sx={{
         width: { xs: "75%", sm: "25%" },
         m: 1,

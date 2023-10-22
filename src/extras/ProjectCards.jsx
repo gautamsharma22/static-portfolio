@@ -17,7 +17,6 @@ const ProjectCards = ProjectData.map((project) => {
     <Card
       sx={{ width: { xs: "75%", sm: "25%" }, m: 1 }}
       key={project.title}
-      variant="outlined"
     >
       <CardHeader
         avatar={

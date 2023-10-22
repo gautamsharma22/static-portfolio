@@ -7,7 +7,6 @@ import CardMedia from "@mui/material/CardMedia";
 const TechCards = Tech.map((tech) => {
   return (
     <Card
-      variant="outlined"
       sx={{
         width: { xs: "75%", sm: "25%" },
         m: 1,

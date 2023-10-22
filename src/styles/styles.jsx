@@ -14,7 +14,7 @@ const ABOUT_BOX1_OUTER = {
   backgroundPosition: "center",
   backgroundSize: "cover",
   backgroundAttachment: "fixed",
-  mt: 2,
+  mt: 1,
 };
 const ABOUT_BOX2_OUTER = {
   width: { xs: "100vw", sm: "30vw" },
@@ -55,7 +55,7 @@ const PROJECT_CONTAINER = {
   backgroundPosition: "center",
   backgroundSize: "cover",
   backgroundAttachment: "fixed",
-  mt: 2,
+  mt: 1,
 };
 const PROJECT_CHILD1 = {
   display: "flex",
@@ -130,7 +130,7 @@ const MESSAGE_BOX3 = {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  height: "100vh",
+  height: { xs: "85vh", sm: "100vh" },
   width: { xs: "100vw", sm: "50vw" },
 };
 const TECH_STYLE1 = {
@@ -142,7 +142,7 @@ const TECH_STYLE1 = {
   backgroundPosition: "center",
   backgroundSize: "cover",
   backgroundAttachment: "fixed",
-  mt: 2,
+  mt: 1,
 };
 const TECH_STYLE2 = {
   textAlign: "center",

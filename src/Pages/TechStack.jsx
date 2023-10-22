@@ -6,7 +6,7 @@ import { TECH_STYLE1, TECH_STYLE2, TECH_STYLE3 } from "../styles/styles";
 const TechStack = () => {
   return (
     <>
-      <Box minHeight="80vh" sx={TECH_STYLE1}>
+      <Box minHeight="50vh" sx={TECH_STYLE1}>
         <Typography variant="h3" gutterBottom sx={TECH_STYLE2}>
           Current Tech Stack
         </Typography>

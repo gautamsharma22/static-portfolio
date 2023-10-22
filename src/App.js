@@ -21,9 +21,9 @@ function App() {
           <MenuBar />
           <HomePage />
           <AboutPage />
-          <LangSkillsPage />
-          <Projects/>
           <TechStackPage />
+          <Projects/>
+          <LangSkillsPage />
           <MessagePage />
           <Footer />
       </ThemeProvider>

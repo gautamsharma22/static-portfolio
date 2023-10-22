@@ -7,7 +7,7 @@ const LangSkills = () => {
   return (
     <>
       <Box
-        minHeight="100vh"
+        minHeight="50vh"
         sx={{
           display: "flex",
           flexDirection: "column",
@@ -17,7 +17,7 @@ const LangSkills = () => {
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundAttachment: "fixed",
-          mt: 2,
+          mt: 1,
         }}
       >
         <Typography
