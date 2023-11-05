@@ -74,7 +74,7 @@ export const ProjectData = [
     title: "Coupons Array",
     color:"#d9376e",
     date: "December-2022",
-    link:"https://github.com/i-gautamsharma/coupans-array",
+    link:"https://i-gautamsharma.github.io/coupansArray/#/",
     Image: CouponImage,
     info:
     "It is Coupon Sharing website in which users can share coupons among them when required. This project was developed under the mentorship of my elder brother.",
