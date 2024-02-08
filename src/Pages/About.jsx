@@ -7,8 +7,7 @@ import {
   ABOUT_BOX1_INNNER1,
   ABOUT_BOX1_INNNER2,
   ABOUT_BOX2_INNER,
-  PARA1,
-  PARA2,
+  PARA1
 } from "../styles/styles";
 import { useMediaQuery } from "@mui/material";
 const About = () => {
@@ -30,14 +29,6 @@ const About = () => {
             </Typography>
             <Typography variant={variant} sx={{ p: 3 }} textAlign={"justify"}>
               {PARA1}
-            </Typography>
-            <Typography
-              variant={variant}
-              gutterBottom
-              sx={{ p: 3 }}
-              textAlign={"justify"}
-            >
-              {PARA2}
             </Typography>
           </Box>
         </Box>
