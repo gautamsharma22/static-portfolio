@@ -60,7 +60,7 @@ export const ProjectData = [
   {
     title: "Weather App",
     date: "January-2023",
-    link: "https://gautamsharma22.github.io/weather-build/",
+    link: "https://gsmyweather.vercel.app/",
     Image: WeatherImage,
     color: "#3da9fc",
     info: "My first React Application. It shows information about weather by inputting city from user. In this learned Basics of React, How to make API calls.",
