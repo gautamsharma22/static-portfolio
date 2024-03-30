@@ -16,9 +16,9 @@ function App() {
     },
   });
   return (
-    <div className="App">
       <ThemeProvider theme={darkTheme}>
           <MenuBar />
+    <div className="App">
           <HomePage />
           <AboutPage />
           <TechStackPage />
@@ -26,8 +26,8 @@ function App() {
           <LangSkillsPage />
           <MessagePage />
           <Footer />
-      </ThemeProvider>
     </div>
+      </ThemeProvider>
   );
 }
 export default App;
