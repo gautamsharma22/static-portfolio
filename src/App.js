@@ -16,18 +16,18 @@ function App() {
     },
   });
   return (
-      <ThemeProvider theme={darkTheme}>
-          <MenuBar />
-    <div className="App">
-          <HomePage />
-          <AboutPage />
-          <TechStackPage />
-          <Projects/>
-          <LangSkillsPage />
-          <MessagePage />
-          <Footer />
-    </div>
-      </ThemeProvider>
+    <ThemeProvider theme={darkTheme}>
+      <MenuBar />
+      <div className="App">
+        <HomePage />
+        <AboutPage />
+        <TechStackPage />
+        <Projects />
+        <LangSkillsPage />
+        <MessagePage />
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 }
 export default App;
