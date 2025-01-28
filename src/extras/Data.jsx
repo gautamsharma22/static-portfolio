@@ -69,7 +69,7 @@ export const ProjectData = [
     title: "Coupons Array",
     color: "#d9376e",
     date: "December-2022",
-    link: "https://gautamsharma22.github.io/coupansArray/#/",
+    link: "https://coupans-array.vercel.app/",
     Image: CouponImage,
     info: "It is Coupon Sharing website in which users can share coupons among them when required. This project was developed under the mentorship of my elder brother.",
   },
