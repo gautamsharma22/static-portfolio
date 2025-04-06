@@ -6,13 +6,13 @@ import Box from "@mui/material/Box";
 import LCLogo from "../assets/leetcode.png";
 const Icons = () => {
   const navIcons = [
-      <img src={LCLogo} className=" leetcode-logo" />,
-      <LinkedInIcon fontSize="large" />,
-      <GitHubIcon fontSize="large" />,
-      <EmailIcon fontSize="large" />,
+    <img src={LCLogo} className=" leetcode-logo" />,
+    <LinkedInIcon fontSize="large" />,
+    <GitHubIcon fontSize="large" />,
+    <EmailIcon fontSize="large" />,
   ];
   const navLinks = [
-    "https://www.leetcode.com/u/LC_Binod",
+    "https://leetcode.com/gautamsharma22",
     "https://www.linkedin.com/in/gautamsharma22",
     "https://www.github.com/gautamsharma22",
     "mailto:gautamsharma.best@gmail.com",
